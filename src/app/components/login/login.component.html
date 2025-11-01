@@ -1,0 +1,31 @@
+<div class="login-container">
+  <h2>Login</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <!-- Username -->
+    <label>Username:</label>
+    <input type="text" formControlName="username" placeholder="Enter username" />
+    <div *ngIf="submitted && loginForm.controls['username'].invalid" class="error">
+      Username must contain 1 capital letter, 1 number, and 1 symbol.
+    </div>
+
+    <!-- Password -->
+    <label>Password:</label>
+    <input type="password" formControlName="password" placeholder="Enter numeric password" />
+    <div *ngIf="submitted && loginForm.controls['password'].invalid" class="error">
+      Password should contain only numbers.
+    </div>
+
+    <button type="submit" class="submit-btn">Login</button>
+  </form>
+
+  <p class="login-redirect" >
+    Already have an account?
+    <!-- <a routerLink="/register">Register</a> -->
+
+    <button class="btn login" (click)="navigateTo('register')">Register</button>
+
+  </p>
+
+
+</div>

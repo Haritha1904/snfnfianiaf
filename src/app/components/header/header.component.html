@@ -1,0 +1,27 @@
+<nav class="navbar">
+  <div class="logo" (click)="navigateTo('')">
+    <img src="assets/logo.png" alt="Expense Tracker Logo">
+    <h2>Expense<span>Tracker</span></h2>
+  </div>
+
+  <ul class="nav-links">
+    <!-- <li><a routerLink="">Home</a></li> -->
+    <button class="btn login" (click)="navigateTo('home')">Home</button>
+    <!-- <li><a routerLink="/about">About</a></li> -->
+    <button class="btn login" (click)="navigateTo('about')">About</button>
+
+
+    <button class="btn login" (click)="navigateTo('expense-tracker')">Track</button>
+
+    <button class="btn login" (click)="navigateTo('register')">Register</button>
+<!--
+    <li><a routerLink="/admin-login">Admin</a></li>
+    <li><a routerLink="/staff-login">Staff</a></li> -->
+    <li><a routerLink="/contact">Contact</a></li>
+  </ul>
+
+  <div class="actions">
+    <button class="btn login" (click)="navigateTo('login')">Login</button>
+    <button class="btn signup" (click)="navigateTo('register')">Sign Up</button>
+  </div>
+</nav>

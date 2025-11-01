@@ -1,0 +1,37 @@
+<div class="register-container">
+  <h2>Register</h2>
+
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <!-- Username -->
+    <label>Username:</label>
+    <input type="text" formControlName="username" placeholder="Enter username" />
+    <div *ngIf="submitted && registerForm.controls['username'].invalid" class="error">
+      Username must contain 1 capital letter, 1 number, and 1 symbol.
+    </div>
+
+    <!-- Email -->
+    <label>Email:</label>
+    <input type="email" formControlName="email" placeholder="Enter your Gmail ID" />
+    <div *ngIf="submitted && registerForm.controls['email'].invalid" class="error">
+    Please enter a valid Gmail address (e.g., example&#64;gmail.com).
+    </div>
+
+    <!-- Password -->
+    <label>Password:</label>
+    <input type="password" formControlName="password" placeholder="Enter numeric password" />
+    <div *ngIf="submitted && registerForm.controls['password'].invalid" class="error">
+      Password should contain only numbers.
+    </div>
+
+    <button type="submit" class="submit-btn">Register</button>
+  </form>
+
+  <p class="login-redirect" >
+    Already have an account?
+    <!-- <a routerLink="/login">Login</a> -->
+    <button class="btn login" (click)="navigateTo('login')">Login</button>
+
+  </p>
+
+
+</div>

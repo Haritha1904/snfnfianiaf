@@ -1,0 +1,99 @@
+.about-section {
+  background: linear-gradient(135deg, #a2c2e0 0%, #f4f8fb 100%);
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+
+  .container {
+    max-width: 1000px;
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+
+  .intro {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+
+    .card {
+      background: #f9fcff;
+      padding: 1.5rem;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #dfeaf1;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #1a5276;
+        margin-bottom: 0.8rem;
+      }
+
+      p, li {
+        color: #555;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li::before {
+        content: "✔ ";
+        color: #2ecc71;
+      }
+    }
+  }
+
+  .back-btn {
+    margin-top: 3rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: arrow;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #217dbb;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
